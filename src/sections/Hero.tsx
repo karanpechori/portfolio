@@ -1,12 +1,15 @@
+import { Fragment } from "react";
+import { profile } from "../data/profile";
+
 export default function Hero() {
   return (
     <section className="mb-16">
       <div className="flex items-center gap-2 text-sm text-[var(--color-muted)] mb-6">
         <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-        Open to SDE-III / Senior Frontend roles
+        {profile.status}
       </div>
       <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
-        Karan Pechori
+        {profile.name}
       </h1>
       <p className="text-lg text-[var(--color-muted)] leading-relaxed">
         Full-stack engineer building B2B/B2C e-commerce, CRM, and SEO infra at{" "}
@@ -15,11 +18,13 @@ export default function Hero() {
         business metrics.
       </p>
       <div className="mt-6 flex flex-wrap gap-2 text-sm text-[var(--color-muted)]">
-        <span>📍 Gurugram, India</span>
-        <span>·</span>
-        <span>240+ merged PRs</span>
-        <span>·</span>
-        <span>Patent holder</span>
+        <span>📍 {profile.location}</span>
+        {profile.highlights.map((h) => (
+          <Fragment key={h}>
+            <span>·</span>
+            <span>{h}</span>
+          </Fragment>
+        ))}
       </div>
     </section>
   );

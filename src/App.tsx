@@ -1,10 +1,10 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Achievements from "./components/Achievements";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Achievements from "./sections/Achievements";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
