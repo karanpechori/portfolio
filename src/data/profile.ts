@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Karan Pechori",
+  name: "Karan",
   location: "Gurugram, India",
   status: "Open to SDE-III / Senior Frontend roles",
   highlights: ["240+ merged PRs", "Patent holder"],
